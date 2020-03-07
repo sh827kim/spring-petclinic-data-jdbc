@@ -11,13 +11,6 @@ plugins {
 
 apply plugin: 'io.spring.dependency-management'
 
-jar {
-    manifest {
-        attributes(
-                'Main-Class': 'org.springframework.samples.petclinic.PetClinicApplication'
-        )
-    }
-}
 
 repositories {
     jcenter()
