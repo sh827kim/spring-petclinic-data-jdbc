@@ -34,7 +34,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql
+  name: mysql-deployment
   namespace: default
   labels:
     app: mysql
@@ -75,7 +75,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-cluster-ip-service
+  name: mysql-svc
+  namespace: default
 spec:
   ports:
   - port: 3306
