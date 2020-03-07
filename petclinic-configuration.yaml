@@ -55,7 +55,6 @@ spec:
         - name: log-dir
           hostPath:
             path: /logs
-            type: Directory
 
 ---
 
