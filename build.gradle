@@ -57,20 +57,25 @@ dependencies {
 
 }
 
+bootJar {
+  baseName = 'petclinic-spark'
+  version = '1.0'
+}
 
+
+jib {
+    to {
+      image = "sh827kim/${bootJar.baseName}:${bootJar.version}"
+      tags = ['latest']
+      }
+   }
 
 group = 'org.springframework.samples'
-version = '2.1.0.BUILD-SNAPSHOT'
+version = '1.0'
 description = 'petclinic'
 sourceCompatibility = '1.8'
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
+
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'

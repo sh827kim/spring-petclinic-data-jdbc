@@ -19,30 +19,19 @@ $ ./gradlew clean
 gradle build
 
 ```shell
-$ ./gradlew build
-```
-
-jar file 문제없이 실행 가능한지 확인
-
-```shell
-$ java -jar build/libs/spring-petclinic-data-jdbc-2.1.0.BUILD-SNAPSHOT.jar
+$ ./gradlew bootJar
 ```
 
 
 
-## 2. Dockerfile Build
+## 2. Docker Build
 
 docker build
 
 ```shell
-$ docker build -t sh827kim/petclinic-spark:1.0 .
+$ ./gradlew jib
 ```
 
-image push to dockerhub
-
-```shell
-$ docker push sh827kim/petclinic-spark:1.0
-```
 
 
 
@@ -68,11 +57,9 @@ $ kubectl apply -f petclinic-configuration.yaml
 
 1. application.properties log 관련 config 일부 수정
 
-2. gradle spring build를 위한 springboot-gradle plugin 추가 적용
+2. gradle spring build를 위한 springboot-gradle plugin, docker build를 위한 jib 추가 적용
 
-3. Dockerfile 추가
-
-4. kubernetes configuration 파일 추가
+3. kubernetes configuration 파일 추가
 
 
 
