@@ -62,3 +62,20 @@ petclinic-configuration.yaml 실행을 통해 deployment 생성, service 생성,
 $ kubectl apply -f petclinic-configuration.yaml
 ```
 
+
+
+## 기존 github 코드와 달라진 점
+
+1. application.properties log 관련 config 일부 수정
+
+2. gradle spring build를 위한 springboot-gradle plugin 추가 적용
+
+3. Dockerfile 추가
+
+4. kubernetes configuration 파일 추가
+
+
+
+
+
+
